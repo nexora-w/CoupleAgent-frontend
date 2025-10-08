@@ -84,14 +84,14 @@ const Price = () => {
             alt="heart"
             width={385}
             height={348}
-            className="md:block hidden absolute top-0 left-0 -translate-x-1/2 -translate-y-1/2 w-48 sm:w-64 md:w-80 lg:w-96 h-auto"
+            className="md:block hidden absolute top-20 left-40 -translate-x-1/2 -translate-y-1/2 w-48 sm:w-64 md:w-80 lg:w-96 h-auto -z-10"
           />
           <Image
             src="/assets/images/landing/price/2.png"
             alt="heart"
             width={343}
             height={402}
-            className="md:block hidden absolute top-0 right-0 translate-x-1/2 -translate-y-1/2 w-48 sm:w-64 md:w-80 lg:w-96 h-auto"
+            className="md:block hidden absolute top-20 right-40 translate-x-1/2 -translate-y-1/2 w-48 sm:w-64 md:w-80 lg:w-96 h-auto -z-10"
           />
         </div>
       </div>
@@ -111,7 +111,7 @@ const Price = () => {
             disableOnInteraction: false,
           }}
           loop={true}
-          className="price-swiper"
+          className="custom-swiper"
         >
           {priceCards.map((priceCard) => (
             <SwiperSlide key={priceCard.title}>

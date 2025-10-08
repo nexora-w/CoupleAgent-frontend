@@ -149,7 +149,7 @@ const Feature = () => {
             disableOnInteraction: false,
           }}
           loop={true}
-          className="feature-swiper"
+          className="custom-swiper"
         >
           {features.map((feature) => (
             <SwiperSlide key={feature.id}>
@@ -162,30 +162,11 @@ const Feature = () => {
       </div>
 
       {/* Desktop/Tablet Grid */}
-      <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-12 px-12">
+      <div className="hidden md:grid md:grid-cols-2 xl:grid-cols-3 gap-12 px-12">
         {features.map((feature) => (
           <FeatureCard key={feature.id} feature={feature} />
         ))}
       </div>
-
-      <style jsx global>{`
-        .feature-swiper .swiper-pagination-bullet {
-          background: #ec4899;
-          opacity: 0.5;
-        }
-        .feature-swiper .swiper-pagination-bullet-active {
-          background: #ec4899;
-          opacity: 1;
-        }
-        .feature-swiper .swiper-button-next,
-        .feature-swiper .swiper-button-prev {
-          color: #ec4899;
-        }
-        .feature-swiper .swiper-button-next:after,
-        .feature-swiper .swiper-button-prev:after {
-          font-size: 24px;
-        }
-      `}</style>
     </section>
   );
 };

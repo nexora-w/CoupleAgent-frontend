@@ -10,18 +10,17 @@ const Home = () => {
     <>
       <main className="min-h-screen relative overflow-hidden">
         <Header />
-        
-        {/* Spacer for fixed header */}
+
         <div className="h-24 lg:h-28"></div>
 
         <Hero />
+        <div className="space-y-24">
+          <Feature />
 
-        <Feature />
+          <Price />
 
-
-        <Price />
-
-        <Advantages />
+          <Advantages />
+        </div>
       </main>
       <Footer />
     </>

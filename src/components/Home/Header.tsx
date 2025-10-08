@@ -41,7 +41,7 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-1/2 -translate-x-1/2 transform z-50 backdrop-blur-lg shadow-xl bg-[#D9D9D9]/5 transition-all duration-500 ease-in-out w-[90%] mx-auto rounded-3xl md:rounded-full ${
+      className={`fixed top-0 left-1/2 -translate-x-1/2 transform z-50 backdrop-blur-lg shadow-xl bg-[#D9D9D9]/5 transition-all duration-500 ease-in-out w-[95%] sm:w-[90%] md:w-[85%] lg:w-[80%] xl:w-[75%] mx-auto rounded-3xl md:rounded-full ${
         isScrolled ? "mt-4 scale-95" : "bg-[#D9D9D9]/5 mt-10 scale-100"
       }`}
     >

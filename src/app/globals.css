@@ -52,36 +52,19 @@ html {
   touch-action: manipulation;
 }
 
-/* Swiper custom styles */
-.feature-swiper {
-  padding: 20px 0 60px 0;
+.custom-swiper .swiper-pagination-bullet {
+  background: #ec4899;
+  opacity: 0.5;
 }
-
-.feature-swiper .swiper-button-next,
-.feature-swiper .swiper-button-prev {
-  color: #FF35B5;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  margin-top: -20px;
-}
-
-.feature-swiper .swiper-button-next:after,
-.feature-swiper .swiper-button-prev:after {
-  font-size: 16px;
-  font-weight: bold;
-}
-
-.feature-swiper .swiper-pagination-bullet {
-  background: rgba(255, 255, 255, 0.3);
+.custom-swiper .swiper-pagination-bullet-active {
+  background: #ec4899;
   opacity: 1;
 }
-
-.feature-swiper .swiper-pagination-bullet-active {
-  background: #FF35B5;
+.custom-swiper .swiper-button-next,
+.custom-swiper .swiper-button-prev {
+  color: #ec4899;
 }
-
-.feature-swiper .swiper-pagination {
-  bottom: 20px;
+.custom-swiper .swiper-button-next:after,
+.custom-swiper .swiper-button-prev:after {
+  font-size: 24px;
 }

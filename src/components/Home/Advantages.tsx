@@ -94,7 +94,7 @@ const Advantages = () => {
               spaceBetween: 30,
             },
           }}
-          className="advantages-swiper"
+          className="custom-swiper"
         >
           {advantages.map((advantage, index) => (
             <SwiperSlide key={index}>
@@ -118,25 +118,6 @@ const Advantages = () => {
             </button>
           </RippleEffect>
         </div>
-
-        <style jsx global>{`
-          .advantages-swiper .swiper-pagination-bullet {
-            background: #ec4899;
-            opacity: 0.5;
-          }
-          .advantages-swiper .swiper-pagination-bullet-active {
-            background: #ec4899;
-            opacity: 1;
-          }
-          .advantages-swiper .swiper-button-next,
-          .advantages-swiper .swiper-button-prev {
-            color: #ec4899;
-          }
-          .advantages-swiper .swiper-button-next:after,
-          .advantages-swiper .swiper-button-prev:after {
-            font-size: 24px;
-          }
-        `}</style>
       </div>
     </section>
   );
