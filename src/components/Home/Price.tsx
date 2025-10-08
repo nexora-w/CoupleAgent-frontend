@@ -40,7 +40,19 @@ const priceCards = [
 
 const PriceCard = ({ priceCard }: { priceCard: (typeof priceCards)[0] }) => {
   return (
-    <div className="bg-[#D9D9D9]/5 rounded-2xl p-6 md:p-12 border border-[#525252] backdrop-blur-[24px] w-full max-w-[500px] h-[500px] flex flex-col">
+    <div className="bg-[#D9D9D9]/5 rounded-2xl p-6 md:p-12 border border-[#525252] backdrop-blur-[24px] w-full max-w-[500px] h-[500px] flex flex-col relative">
+      {/* Bookmark image for Better Together Plan */}
+      {priceCard.title === "Better Together Plan" && (
+        <div className="absolute -top-8 -left-5.5 z-10">
+          <Image
+            src="/assets/images/landing/price/bookmark.svg"
+            alt="Most Popular"
+            width={80}
+            height={80}
+            className="w-40 h-40"
+          />
+        </div>
+      )}
       <h3 className="text-2xl md:text-3xl font-bold mb-4 text-center mt-4 md:mt-6">
         {priceCard.title}
       </h3>
@@ -127,7 +139,7 @@ const Price = () => {
           >
             {priceCards.map((priceCard) => (
               <SwiperSlide key={priceCard.title}>
-                <div className="!w-full">
+                <div className="!w-full p-3">
                   <PriceCard priceCard={priceCard} />
                 </div>
               </SwiperSlide>
