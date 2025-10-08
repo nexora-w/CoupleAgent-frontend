@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Frank+Ruhl+Libre:wght@300..900&display=swap');
 
 :root {
   --background: #1A1A1F;
@@ -28,20 +27,6 @@ body {
   font-family: var(--font-chakra-petch);
 }
 
-/* Custom animations */
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
-
-.animate-float {
-  animation: float 3s ease-in-out infinite;
-}
-
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
@@ -60,4 +45,43 @@ html {
 
 .animate-ripple {
   animation: ripple ease-out;
+}
+
+/* Mobile optimizations */
+.touch-manipulation {
+  touch-action: manipulation;
+}
+
+/* Swiper custom styles */
+.feature-swiper {
+  padding: 20px 0 60px 0;
+}
+
+.feature-swiper .swiper-button-next,
+.feature-swiper .swiper-button-prev {
+  color: #FF35B5;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-top: -20px;
+}
+
+.feature-swiper .swiper-button-next:after,
+.feature-swiper .swiper-button-prev:after {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.feature-swiper .swiper-pagination-bullet {
+  background: rgba(255, 255, 255, 0.3);
+  opacity: 1;
+}
+
+.feature-swiper .swiper-pagination-bullet-active {
+  background: #FF35B5;
+}
+
+.feature-swiper .swiper-pagination {
+  bottom: 20px;
 }

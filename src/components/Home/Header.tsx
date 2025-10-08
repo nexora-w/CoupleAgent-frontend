@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import RippleEffect from "../ui/RippleEffect";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,7 +24,7 @@ const Header = () => {
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       const target = event.target as Element;
-      if (isMenuOpen && !target.closest('.mobile-menu')) {
+      if (isMenuOpen && !target.closest(".mobile-menu")) {
         setIsMenuOpen(false);
       }
     };
@@ -39,11 +40,9 @@ const Header = () => {
   ];
 
   return (
-    <header 
-      className={`fixed top-0 left-1/2 -translate-x-1/2 transform z-50 backdrop-blur-lg shadow-xl bg-[#D9D9D9]/5 transition-all duration-500 ease-in-out w-[90%] mx-auto rounded-full ${
-        isScrolled 
-          ? 'mt-4 scale-95' 
-          : 'bg-[#D9D9D9]/5 mt-10 scale-100'
+    <header
+      className={`fixed top-0 left-1/2 -translate-x-1/2 transform z-50 backdrop-blur-lg shadow-xl bg-[#D9D9D9]/5 transition-all duration-500 ease-in-out w-[90%] mx-auto rounded-3xl md:rounded-full ${
+        isScrolled ? "mt-4 scale-95" : "bg-[#D9D9D9]/5 mt-10 scale-100"
       }`}
     >
       <div className="px-8 lg:px-16">
@@ -60,9 +59,7 @@ const Header = () => {
                 priority
               />
             </div>
-            <h1 className="text-base sm:text-lg font-bold">
-              CoupleAgent
-            </h1>
+            <h1 className="text-base sm:text-lg font-bold">CoupleAgent</h1>
           </div>
 
           {/* Desktop Navigation */}
@@ -119,9 +116,7 @@ const Header = () => {
         {/* Mobile Menu */}
         <div
           className={`lg:hidden transition-all duration-300 overflow-hidden ${
-            isMenuOpen
-              ? "max-h-96 opacity-100"
-              : "max-h-0 opacity-0"
+            isMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
           }`}
         >
           <div className="py-4 space-y-4 border-t border-foreground/10">
@@ -135,13 +130,15 @@ const Header = () => {
                 {link.name}
               </a>
             ))}
-            <div className="pt-4 space-y-3 border-t border-foreground/10">
+            <div className="pt-4 space-y-3 border-t border-foreground/10 pb-4">
               <button className="block w-full text-left text-foreground/80 hover:text-foreground transition-colors duration-200 font-medium py-2 px-4 rounded-lg hover:bg-foreground/5">
                 Sign In
               </button>
-              <button className="block w-full bg-[#FF35B5] hover:bg-[#E474BB] text-white font-semibold py-2.5 px-4 rounded-lg transition-all duration-200">
-                Start Free Trial
-              </button>
+              <RippleEffect rippleColor={`#BA00DF`} className="rounded-lg">
+                <button className="block w-full bg-[#FF35B5] hover:bg-[#E474BB] text-white font-semibold py-2.5 px-4 rounded-lg transition-all duration-200">
+                  Start Free Trial
+                </button>
+              </RippleEffect>
             </div>
           </div>
         </div>

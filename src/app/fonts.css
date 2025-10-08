@@ -1,0 +1,63 @@
+@font-face {
+  font-family: 'Frank Ruhl Libre';
+  src: url('/assets/font/Frank_Ruhl_Libre/FrankRuhlLibre-VariableFont_wght.ttf') format('truetype-variations');
+  font-weight: 300 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Frank Ruhl Libre';
+  src: url('/assets/font/Frank_Ruhl_Libre/static/FrankRuhlLibre-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Frank Ruhl Libre';
+  src: url('/assets/font/Frank_Ruhl_Libre/static/FrankRuhlLibre-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Frank Ruhl Libre';
+  src: url('/assets/font/Frank_Ruhl_Libre/static/FrankRuhlLibre-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Frank Ruhl Libre';
+  src: url('/assets/font/Frank_Ruhl_Libre/static/FrankRuhlLibre-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Frank Ruhl Libre';
+  src: url('/assets/font/Frank_Ruhl_Libre/static/FrankRuhlLibre-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Frank Ruhl Libre';
+  src: url('/assets/font/Frank_Ruhl_Libre/static/FrankRuhlLibre-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Frank Ruhl Libre';
+  src: url('/assets/font/Frank_Ruhl_Libre/static/FrankRuhlLibre-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}

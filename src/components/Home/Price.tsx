@@ -1,5 +1,12 @@
+"use client";
+
 import Image from "next/image";
 import RippleEffect from "../ui/RippleEffect";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 const priceCards = [
   {
@@ -7,7 +14,7 @@ const priceCards = [
     price: "$9.99",
     features: [
       "Unlimited shared conversations",
-      "5 conversation threads",
+      "6 conversation threads",
       "Daily briefings",
       "Basic file storage (1GB)",
     ],
@@ -33,16 +40,16 @@ const priceCards = [
 
 const PriceCard = ({ priceCard }: { priceCard: (typeof priceCards)[0] }) => {
   return (
-    <div className="bg-[#D9D9D9]/5 rounded-2xl p-12 border border-[#525252] backdrop-blur-[24px] w-[500px] h-[550px] flex flex-col">
-      <h3 className="text-3xl font-bold mb-4 text-center mt-6">
+    <div className="bg-[#D9D9D9]/5 rounded-2xl p-6 md:p-12 border border-[#525252] backdrop-blur-[24px] w-full max-w-[500px] h-[500px] flex flex-col">
+      <h3 className="text-2xl md:text-3xl font-bold mb-4 text-center mt-4 md:mt-6">
         {priceCard.title}
       </h3>
       <p className="text-gray-300 flex justify-start items-center gap-1 mb-4">
-        <span className="text-4xl font-bold">{priceCard.price}</span>
+        <span className="text-3xl md:text-4xl font-bold">{priceCard.price}</span>
         <span className="text-base">/</span>
         <span className="text-base">month</span>
       </p>
-      <ul className="list-disc list-inside text-gray-300 text-left mb-4 text-lg space-y-2 flex-grow">
+      <ul className="list-disc list-inside text-gray-300 text-left mb-4 text-base md:text-lg space-y-2 flex-grow">
         {priceCard.features.map((feature) => (
           <li key={feature}>{feature}</li>
         ))}
@@ -65,7 +72,7 @@ const PriceCard = ({ priceCard }: { priceCard: (typeof priceCards)[0] }) => {
 
 const Price = () => {
   return (
-    <section id="pricing" className="container mx-auto px-12 md:px-28 lg:px-32 py-32">
+    <section id="pricing" className="sm:container mx-auto md:px-16 lg:px-20 py-8">
       <div className="text-center mb-16">
         <h1 className="text-4xl font-bold mb-4">Simple pricing for couples</h1>
         <p className="text-gray-300">
@@ -77,18 +84,47 @@ const Price = () => {
             alt="heart"
             width={385}
             height={348}
-            className="absolute top-0 left-0 -translate-x-1/2 -translate-y-1/2 w-48 sm:w-64 md:w-80 lg:w-96 h-auto"
+            className="md:block hidden absolute top-0 left-0 -translate-x-1/2 -translate-y-1/2 w-48 sm:w-64 md:w-80 lg:w-96 h-auto"
           />
           <Image
             src="/assets/images/landing/price/2.png"
             alt="heart"
             width={343}
             height={402}
-            className="absolute top-0 right-0 translate-x-1/2 -translate-y-1/2 w-48 sm:w-64 md:w-80 lg:w-96 h-auto"
+            className="md:block hidden absolute top-0 right-0 translate-x-1/2 -translate-y-1/2 w-48 sm:w-64 md:w-80 lg:w-96 h-auto"
           />
         </div>
       </div>
-      <div className="flex flex-col lg:flex-row justify-center gap-12 items-center">
+      {/* Mobile Swiper */}
+      <div className="block md:hidden px-4 ">
+        <Swiper
+          modules={[Navigation, Pagination, Autoplay]}
+          spaceBetween={20}
+          slidesPerView={1}
+          navigation={false}
+          pagination={{ 
+            clickable: true,
+            dynamicBullets: true 
+          }}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+          }}
+          loop={true}
+          className="price-swiper"
+        >
+          {priceCards.map((priceCard) => (
+            <SwiperSlide key={priceCard.title}>
+              <div className="!w-full">
+                <PriceCard priceCard={priceCard} />
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+
+      {/* Desktop/Tablet Grid */}
+      <div className="hidden md:flex flex-col lg:flex-row justify-center gap-12 items-center pt-10">
         {priceCards.map((priceCard) => (
           <PriceCard key={priceCard.title} priceCard={priceCard} />
         ))}
