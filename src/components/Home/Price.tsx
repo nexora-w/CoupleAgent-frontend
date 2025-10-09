@@ -96,10 +96,10 @@ const Price = () => {
         className="sm:container mx-auto md:px-16 lg:px-20 py-8"
       >
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold mb-4">
+          <h1 className="text-2xl lg:text-5xl font-bold mb-4">
             Simple pricing for couples
           </h1>
-          <p className="text-gray-300">
+          <p className="text-lg text-white/50 max-w-2xl mx-auto">
             One subscription covers both partners. Cancel anytime.
           </p>
           <div className="relative w-full">
@@ -138,7 +138,7 @@ const Price = () => {
             className="custom-swiper"
           >
             {priceCards.map((priceCard) => (
-              <SwiperSlide key={priceCard.title}>
+              <SwiperSlide key={priceCard.title} className="!pb-8">
                 <div className="!w-full p-3">
                   <PriceCard priceCard={priceCard} />
                 </div>

@@ -133,10 +133,10 @@ const Feature = () => {
         className="sm:container mx-auto md:px-16 lg:px-20 py-8"
       >
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold mb-4">
+          <h1 className="text-xl md:text-2xl lg:text-5xl font-bold mb-4">
             Everything you need to grow together
           </h1>
-          <p className="text-gray-300">
+          <p className="text-lg text-white/50 max-w-2xl mx-auto">
             CoupleAgent brings you closer with intelligent features designed for
             two hearts, one shared journey.
           </p>
@@ -154,14 +154,14 @@ const Feature = () => {
               dynamicBullets: true,
             }}
             autoplay={{
-              delay: 1500,
+              delay: 3000,
               disableOnInteraction: false,
             }}
             loop={true}
-            className="custom-swiper"
+            className="custom-swiper relative pb-16"
           >
             {features.map((feature) => (
-              <SwiperSlide key={feature.id}>
+              <SwiperSlide key={feature.id} className="!pb-8">
                 <div className="px-4 py-3">
                   <FeatureCard feature={feature} />
                 </div>

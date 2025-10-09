@@ -55,7 +55,7 @@ const Advantages = () => {
     <section id="advantages" className="py-16">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-white mb-4">
+          <h2 className="text-xl md:text-2xl lg:text-5xl font-bold mb-4">
             Why Choose CoupleAgent?
           </h2>
           <p className="text-lg text-white/50 max-w-2xl mx-auto">
@@ -97,7 +97,7 @@ const Advantages = () => {
           className="custom-swiper"
         >
           {advantages.map((advantage, index) => (
-            <SwiperSlide key={index}>
+            <SwiperSlide key={index} className="!pb-8">
               <div className="bg-[#D9D9D9]/5 rounded-lg p-6 border border-[#525252] hover:bg-[#D9D9D9]/10 transition-all duration-300 transform h-48 flex flex-col">
                 <h3 className="text-xl font-semibold text-white mb-3">
                   {advantage.title}

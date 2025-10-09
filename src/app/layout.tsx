@@ -28,7 +28,6 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#1A1A1F] overflow-x-hidden`}
-        style={{ fontFamily: 'var(--font-frank-ruhl-libre)' }}
       >
         {children}
       </body>

@@ -68,3 +68,12 @@ html {
 .custom-swiper .swiper-button-prev:after {
   font-size: 24px;
 }
+
+/* Position pagination at bottom of cards */
+/* .custom-swiper .swiper-pagination {
+  position: absolute !important;
+  bottom: -40px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: auto !important;
+} */
