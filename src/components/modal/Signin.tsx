@@ -1,14 +1,11 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { FaArrowRight, FaTimes, FaMagic } from "react-icons/fa";
+import { FaArrowRight, FaTimes } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { FaApple } from "react-icons/fa";
-import { MdOutlineEmail } from "react-icons/md";
-import { TbLockPassword } from "react-icons/tb";
 import Image from "next/image";
 import RippleEffect from "../ui/RippleEffect";
-import Link from "next/link";
 import { GoPeople } from "react-icons/go";
 
 interface SigninModalProps {
@@ -25,9 +22,6 @@ const SigninModal: React.FC<SigninModalProps> = ({ isOpen, onClose }) => {
     confirmPassword: "",
   });
 
-  const [showPassword, setShowPassword] = useState(false);
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-  const [agreedToTerms, setAgreedToTerms] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -35,12 +29,6 @@ const SigninModal: React.FC<SigninModalProps> = ({ isOpen, onClose }) => {
       ...prev,
       [name]: value,
     }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission here
-    console.log("Form submitted:", formData);
   };
 
   const handleSocialLogin = (provider: "google" | "apple") => {
@@ -169,7 +157,7 @@ const SigninModal: React.FC<SigninModalProps> = ({ isOpen, onClose }) => {
         </div>
 
         <div className="mt-6 text-center flex items-center justify-center gap-2">
-          <span className="text-white/75">Don't have an account?</span>
+          <span className="text-white/75">Don&apos;t have an account?</span>
           <button className="text-[#FF35B5] hover:underline cursor-pointer font-medium">
             Sign Up
           </button>

@@ -1,11 +1,10 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { FaArrowRight, FaTimes, FaMagic } from "react-icons/fa";
+import { FaMagic } from "react-icons/fa";
 import Image from "next/image";
 import { GoPeople } from "react-icons/go";
 import RippleEffect from "../ui/RippleEffect";
-import Link from "next/link";
 
 interface CreateNameModalProps {
   isOpen: boolean;
@@ -24,9 +23,6 @@ const CreateNameModal: React.FC<CreateNameModalProps> = ({
     confirmPassword: "",
   });
 
-  const [showPassword, setShowPassword] = useState(false);
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-  const [agreedToTerms, setAgreedToTerms] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -36,15 +32,6 @@ const CreateNameModal: React.FC<CreateNameModalProps> = ({
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission here
-    console.log("Form submitted:", formData);
-  };
-
-  const handleSocialLogin = (provider: "google" | "apple") => {
-    console.log(`Login with ${provider}`);
-  };
 
   // Prevent body scroll when modal is open
   useEffect(() => {

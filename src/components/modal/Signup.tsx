@@ -24,8 +24,8 @@ const SignupModal: React.FC<SignupModalProps> = ({ isOpen, onClose }) => {
     confirmPassword: "",
   });
 
-  const [showPassword, setShowPassword] = useState(false);
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [showPassword] = useState(false);
+  const [showConfirmPassword] = useState(false);
   const [agreedToTerms, setAgreedToTerms] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
