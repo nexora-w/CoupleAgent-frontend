@@ -10,8 +10,6 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-  --font-chakra-petch: 'Chakra Petch', sans-serif;
-  --font-frank-ruhl-libre: 'Frank Ruhl Libre', serif;
 }
 
 @media (prefers-color-scheme: dark) {

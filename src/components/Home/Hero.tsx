@@ -38,7 +38,7 @@ const Hero = () => {
           <div className="text-center lg:text-left space-y-6 sm:space-y-8 order-2 lg:order-1">
             <div className="space-y-3 sm:space-y-4">
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight flex items-center justify-center lg:justify-start">
-                Become Better
+                Share AI
               </h1>
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight flex items-center justify-center lg:justify-start">
                 T
